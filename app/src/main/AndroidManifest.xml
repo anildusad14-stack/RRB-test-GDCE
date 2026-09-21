@@ -1,33 +1,25 @@
-RPSC-Test-App/
-├── .github/
-│   └── workflows/
-│       └── build-apk.yml
-├── build.gradle.kts
-├── settings.gradle.kts
-├── gradle.properties
-└── app/
-    ├── build.gradle.kts
-    └── src/
-        └── main/
-            ├── AndroidManifest.xml
-            ├── res/
-            │   ├── values/
-            │   │   ├── colors.xml
-            │   │   ├── strings.xml
-            │   │   └── themes.xml
-            │   ├── drawable/
-            │   │   ├── ic_launcher_background.xml
-            │   │   └── ic_launcher_foreground.xml
-            │   └── layout/
-            │       ├── activity_main.xml
-            │       ├── activity_test_viewer.xml
-            │       └── item_test.xml
-            └── java/
-                └── com/
-                    └── rpsctest/
-                        └── app/
-                            ├── MainActivity.kt
-                            ├── TestViewerActivity.kt
-                            ├── TestManager.kt
-                            ├── TestAdapter.kt
-                            └── TestItem.kt
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_background"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RPSCTestApp">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity 
+            android:name=".TestViewerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+    </application>
+</manifest>
