@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RPSC Test Library</string>
+    <string name="add_test">ADD TEST</string>
+    <string name="search_hint">Search Tests...</string>
+    <string name="no_tests">No tests found. Add a ZIP or HTML file.</string>
+</resources>
